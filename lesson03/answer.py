@@ -1,10 +1,10 @@
 def sum_func(lines: list[str]) -> str:
-    len = int(lines.readline())
+    len = int(lines[0])
     if len <= 0 or len == None:
         return "EMPTY"
     sum = 0
-    for i in range(len):
-        curr = int(lines.readline())
+    for i in range(1, len):
+        curr = int(lines[i])
         if curr == -999:
             break
         if curr >= 0:
