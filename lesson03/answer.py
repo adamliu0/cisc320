@@ -19,5 +19,4 @@ if __name__ == "__main__":
     filename = input()
     with open(filename) as data_file:
         lines = data_file.readlines()
-    print(lines[0])
     print(sum_func(lines))
