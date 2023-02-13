@@ -3,7 +3,7 @@ def sum_func(lines: list[str]) -> str:
     if len <= 0 or len == None:
         return "EMPTY"
     sum = 0
-    for i in range(1, len):
+    for i in range(1, len+1):
         curr = int(lines[i])
         if curr == -999:
             break
