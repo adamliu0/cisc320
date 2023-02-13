@@ -1,4 +1,4 @@
-def sum_func(lines: list[str]):
+def sum_func(lines: list[str]) -> str:
     len = int(lines.readline())
     if len <= 0 or len == None:
         return "EMPTY"
