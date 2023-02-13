@@ -1,6 +1,6 @@
 def sum_func(lines: list[str]) -> str:
     len = int(lines[0])
-    if len < 0 or len == 0 or len == None:
+    if (len <= 0) or (len == None):
         return "EMPTY"
     sum = 0
     for i in range(1, len+1):
