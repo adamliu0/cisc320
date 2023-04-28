@@ -1,0 +1,5 @@
+student_report function takes the file name of the student logs and reads the information in it. It skips the first line because that just tells how many inputs there are in the file. Each line is split into student id, actionCode, value, and timestamp. If information on the studentid does not already exists, the program makes one in the dictionary. It doesn't do anything with timestamp as the problem does not require it. The program keeps updating the latest P ID each time and it checks if the current P ID that it looks at is lower than its current lowest one. If so, then it updates it. The program also keeps track of submission total scores and number of scores.
+
+In sort_reports, the program deletes student profiles that don't have at least one submission and at least one page. It calculates the average score by doing score sum divided by number of scores. The program then sorts the reports and appends them to the return value.
+
+The runtime is O(S*log(S) + L) because L is the student_report function going through each line of the file, and the python documentation says that sorted() runs in O(S*log(S)).
