@@ -23,13 +23,18 @@ def tsp(adj_matrix, start_node):
     path.append(start_node)
     return path, dist
 
-# Reading the adjacency matrix from input.txt file
-adj_matrix = []
-with open('input.txt') as file:
-    for line in file:
-        adj_matrix.append([int(x) for x in line.split()])
+if __name__ == "__main__":
+    # Reading the adjacency matrix from input file
+    adj_matrix = []
+    # with open('input.txt') as file:
+    #    for line in file:
+    #        adj_matrix.append([int(x) for x in line.split()])
+    filename = input()
+    with open(filename, "r") as file:
+        for line in file:
+            adj_matrix.append([int(x) for x in line.split()])
 
-start_node = 0 # Change this to any node you want to start at
-path, dist = tsp(adj_matrix, start_node)
-print(*path[:-1], sep="\n")
-print(dist)
+    start_node = 0 # Change this to any node you want to start at
+    path, dist = tsp(adj_matrix, start_node)
+    print(*path[:-1], sep="\n")
+    print(dist)
